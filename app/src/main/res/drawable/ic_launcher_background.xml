@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+    <component name="AndroidLayouts">
+        <shared>
+            <config />
+        </shared>
+    </component>
+    <component name="ChangeListManager">
+        <list
+            name="Default Changelist"
+            comment=""
+            default="true"
+            id="c5f8a38f-3261-427b-8f53-8b782fe4272d" />
+        <ignored path="$PROJECT_DIR$/build/classes/" />
+        <option
+            name="EXCLUDED_CONVERTED_TO_IGNORED"
+            value="true" />
+        <option
+            name="SHOW_DIALOG"
+            value="false" />
+        <option
+            name="HIGHLIGHT_CONFLICTS"
+            value="true" />
+        <option
+            name="HIGHLIGHT_NON_ACTIVE_CHANGELIST"
+            value="false" />
+        <option
+            name="LAST_RESOLUTION"
+            value="IGNORE" />
+    </component>
+    <component name="ExternalProjectsManager">
+        <system id="GRADLE">
+            <state>
+                <projects_view />
+            </state>
+        </system>
+    </component>
+    <component name="FUSProjectUsageTrigger">
+        <session id="-232403290">
+            <usages-collector id="statistics.lifecycle.project">
+                <counts>
+                    <entry
+                        key="project.closed"
+                        value="9" />
+                    <entry
+                        key="project.open.time.1"
+                        value="2" />
+                    <entry
+                        key="project.open.time.2"
+                        value="1" />
+                    <entry
+                        key="project.open.time.28"
+                        value="1" />
+                    <entry
+                        key="project.open.time.32"
+                        value="1" />
+                    <entry
+                        key="project.open.time.40"
+                        value="1" />
+                    <entry
+                        key="project.open.time.43"
+                        value="1" />
+                    <entry
+                        key="project.open.time.44"
+                        value="1" />
+                    <entry
+                        key="project.open.time.47"
+                        value="1" />
+                    <entry
+                        key="project.open.time.48"
+                        value="1" />
+                    <entry
+                        key="project.opened"
+                        value="10" />
+                </counts>
+            </usages-collector>
+            <usages-collector id="statistics.file.extensions.open">
+                <counts>
+                    <entry
+                        key="gradle"
+                        value="15" />
+                    <entry
+                        key="java"
+                        value="40" />
+                    <entry
+                        key="png"
+                        value="8" />
+                    <entry
+                        key="properties"
+                        value="1" />
+                    <entry
+                        key="xml"
+                        value="7" />
+                </counts>
+            </usages-collector>
+            <usages-collector id="statistics.file.types.open">
+                <counts>
+                    <entry
+                        key="Groovy"
+                        value="15" />
+                    <entry
+                        key="Image"
+                        value="8" />
+                    <entry
+                        key="JAVA"
+                        value="40" />
+                    <entry
+                        key="Properties"
+                        value="1" />
+                    <entry
+                        key="XML"
+                        value="7" />
+                </counts>
+            </usages-collector>
+            <usages-collector id="statistics.file.extensions.edit">
+                <counts>
+                    <entry
+                        key="gradle"
+                        value="6" />
+                    <entry
+                        key="java"
+                        value="89" />
+                </counts>
+            </usages-collector>
+            <usages-collector id="statistics.file.types.edit">
+                <counts>
+                    <entry
+                        key="Groovy"
+                        value="6" />
+                    <entry
+                        key="JAVA"
+                        value="89" />
+                </counts>
+            </usages-collector>
+        </session>
+        <session id="-168901820">
+            <usages-collector id="statistics.lifecycle.project">
+                <counts>
+                    <entry
+                        key="project.closed"
+                        value="1" />
+                    <entry
+                        key="project.open.time.2"
+                        value="1" />
+                    <entry
+                        key="project.opened"
+                        value="1" />
+                </counts>
+            </usages-collector>
+        </session>
+    </component>
+    <component name="FileEditorManager">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file
+                current-in-tab="false"
+                pinned="false">
+                <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hanyuzhou/accountingapp/RecordBean.java">
+                    <provider
+                        editor-type-id="text-editor"
+                        selected="true">
+                        <state relative-caret-position="152">
+                            <caret
+                                column="27"
+                                line="11"
+                                selection-end-column="27"
+                                selection-end-line="11"
+                                selection-start-column="27"
+                                selection-start-line="11" />
+                            <folding>
+                                <element
+                                    expanded="true"
+                                    signature="imports" />
+                            </folding>
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file
+                current-in-tab="false"
+                pinned="false">
+                <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hanyuzhou/accountingapp/RecordDatabaseHelper.java">
+                    <provider
+                        editor-type-id="text-editor"
+                        selected="true">
+                        <state relative-caret-position="2052">
+                            <caret
+                                column="1"
+                                line="118"
+                                selection-end-column="1"
+                                selection-end-line="118"
+                                selection-start-column="1"
+                                selection-start-line="118" />
+                            <folding>
+                                <element
+                                    expanded="true"
+                                    signature="imports" />
+                            </folding>
+                        </state>
+                    </provider>
+                </entry>
+            </file>
+            <file
+                current-in-tab="false"
+                pinned="false">
+                <entry file="file://$PROJECT_DIR$/app/src/main/java/com/hanyuzhou/accountingapp/MainActivity.java">
+                    <provider
+                        editor-type-id="text-editor"
+                        selected="true">
+                        <state relative-caret-position="399">
+                            <caret
+                                line="30"
+                                selection-end-line="30"
+                                selection-start-line="30" />
+                        </state>
+         

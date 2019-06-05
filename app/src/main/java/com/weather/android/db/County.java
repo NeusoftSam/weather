@@ -22,7 +22,7 @@ public class County extends DataSupport {
         this.id=id;
     }
 
-    public String getCountName(){
+    public String getCountyName(){
         return countyName;
     }
 

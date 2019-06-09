@@ -6,11 +6,11 @@ public class City extends DataSupport {
 
     private int id;
 
-    private String cityName;
+    private String cityName;//记录市的名字
 
-    private int cityCode;
+    private int cityCode;//记录市的代号
 
-    private int provinceId;
+    private int provinceId;//记录当前市所属的id值
 
     public int getId(){
         return id;

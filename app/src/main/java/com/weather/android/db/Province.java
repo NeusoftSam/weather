@@ -4,11 +4,11 @@ import org.litepal.crud.DataSupport;
 
 public class Province extends DataSupport {
 
-private int id;
+private int id;//每个实体都有的字段
 
-private String provinceName;
+private String provinceName;//记录省的名字
 
-private int provinceCode;
+private int provinceCode;//记录省的代号
 
 public int getId(){return id;}
 

@@ -25,7 +25,7 @@ public class Utility {
                     Province province = new Province();
                     province.setProvinceName(provinceObject.getString("name"));
                     province.setProvinceCode(provinceObject.getInt("id"));
-                    province.save();
+                    province.save();//将数据存储到数据库中
                 }
                 return true;
             } catch (JSONException e) {

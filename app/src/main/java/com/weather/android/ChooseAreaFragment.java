@@ -37,7 +37,7 @@ public class ChooseAreaFragment extends Fragment {
 
     private static final String TAG = "ChooseAreaFragment";
 
-    public static final int LEVEL_PROVINCE = 0;
+    public static final int LEVEL_PROVINCE = 0;//static强调他们只有一个，final表明是个常数，用static final修饰的属性表示一旦给值，就不可修改，并且可以通过类名访问
 
     public static final int LEVEL_CITY = 1;
 
@@ -90,11 +90,11 @@ public class ChooseAreaFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.choose_area, container, false);
-        titleText = (TextView) view.findViewById(R.id.title_text);
-        backButton = (Button) view.findViewById(R.id.back_button);
-        listView = (ListView) view.findViewById(R.id.list_view);
+        titleText = view.findViewById(R.id.title_text);
+        backButton = view.findViewById(R.id.back_button);
+        listView = view.findViewById(R.id.list_view);
         adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_list_item_1, dataList);
-        listView.setAdapter(adapter);
+        listView.setAdapter(adapter);//将adapter设置为ListView的适配器
         return view;
     }
 
@@ -143,10 +143,10 @@ public class ChooseAreaFragment extends Fragment {
      * 查询全国所有的省，优先从数据库查询，如果没有查询到再去服务器上查询。
      */
     private void queryProvinces() {
-        titleText.setText("中国");
-        backButton.setVisibility(View.GONE);
-        provinceList = DataSupport.findAll(Province.class);
-        if (provinceList.size() > 0) {
+        titleText.setText("中国");//将头部布局标题设置成中国
+        backButton.setVisibility(View.GONE);//将返回按钮隐藏起来
+        provinceList = DataSupport.findAll(Province.class);//调用LitePal的查询接口从数据库中读取省级数据
+        if (provinceList.size() > 0) {//如果没有读取到了就直接将数据显示到界面上
             dataList.clear();
             for (Province province : provinceList) {
                 dataList.add(province.getProvinceName());
@@ -154,7 +154,7 @@ public class ChooseAreaFragment extends Fragment {
             adapter.notifyDataSetChanged();
             listView.setSelection(0);
             currentLevel = LEVEL_PROVINCE;
-        } else {
+        } else {//如果没有读取到就组装一个请求地址，然后调用queryFromServer
             String address = "http://guolin.tech/api/china";
             queryFromServer(address, "province");
         }

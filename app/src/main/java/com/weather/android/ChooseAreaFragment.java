@@ -274,4 +274,8 @@ public class ChooseAreaFragment extends Fragment {
         }
     }
 
+    private void bindViews(){
+
+    }
+
 }

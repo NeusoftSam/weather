@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@drawable/neusoft2">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="15dp"
+        android:text="制作信息"
+        android:textColor="#00080C"
+        android:textSize="40sp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/writer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="软件作者:"
+        android:textSize="30sp"
+        android:textColor="#160303"
+        android:layout_weight="0"/>
+
+    <TextView
+        android:id="@+id/number1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="郁猛:16160200301"
+        android:textSize="30sp"
+        android:textColor="#160303"
+        android:layout_weight="0"/>
+
+    <TextView
+        android:id="@+id/numbe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_margin="15dp"
+        android:text="郭卉嘉:16160200323"
+        android:textSize="30sp"
+        android:textColor="#160303"
+        android:layout_weight="1" />
+
+
+
+    <TextView
+        android:id="@+id/number2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_margin="15dp"
+        android:text="APP：晴朗天气"
+        android:textSize="25sp"
+        android:textColor="#160303"
+        android:layout_weight="0"/>
+
+    <TextView
+        android:id="@+id/number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_margin="15dp"
+        android:text="软件版本:V1.0"
+        android:textSize="25sp"
+        android:textColor="#160303"
+        android:layout_weight="1"/>
+
+</LinearLayout>

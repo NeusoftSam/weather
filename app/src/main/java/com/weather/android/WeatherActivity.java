@@ -12,10 +12,13 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +30,10 @@ import com.weather.android.util.HttpUtil;
 import com.weather.android.util.Utility;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringJoiner;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -44,7 +51,7 @@ public class WeatherActivity extends AppCompatActivity {
 
     private TextView titleCity;
 
-    private TextView titleUpdateTime;
+//    private TextView titleUpdateTime;
 
     private TextView degreeText;
 
@@ -66,6 +73,13 @@ public class WeatherActivity extends AppCompatActivity {
 
     private String mWeatherId;
 
+    private Spinner spinner;
+
+    private ArrayAdapter<String> adapter;
+
+    private List<String> list;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,8 +93,9 @@ public class WeatherActivity extends AppCompatActivity {
         // 初始化各控件
 //        bingPicImg = findViewById(R.id.bing_pic_img);
         weatherLayout = findViewById(R.id.weather_layout);
+        spinner= findViewById(R.id.spinner);
         titleCity = findViewById(R.id.title_city);
-        titleUpdateTime = findViewById(R.id.title_update_time);
+//        titleUpdateTime = findViewById(R.id.title_update_time);
         degreeText = findViewById(R.id.degree_text);
         weatherInfoText = findViewById(R.id.weather_info_text);
         forecastLayout = findViewById(R.id.forecast_layout);
@@ -95,6 +110,19 @@ public class WeatherActivity extends AppCompatActivity {
         navButton = findViewById(R.id.nav_button);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String weatherString = prefs.getString("weather", null);
+        List<String> list= new ArrayList<>();
+        list.add("1.今日计划");
+        list.add("2.制作信息");
+        list.add("3.退出");
+//        list.add("宜昌");
+
+        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,list);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
+        bindViews();
+
         if (weatherString != null) {
             // 有缓存时直接解析天气数据
             Weather weather = Utility.handleWeatherResponse(weatherString);
@@ -118,6 +146,26 @@ public class WeatherActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
+
+
+//            spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//
+//            switch(position){
+//                case 1:
+//                    Intent intent = new Intent(WeatherActivity.this,Plan.class);
+//                    startActivity(intent);
+//                    break;
+//                    default:break;
+//                }
+//            }
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
+
 //        String bingPic = prefs.getString("bing_pic", null);
 //        if (bingPic != null) {
 //            Glide.with(this).load(bingPic).into(bingPicImg);
@@ -130,7 +178,7 @@ public class WeatherActivity extends AppCompatActivity {
      * 根据天气id请求城市天气信息。
      */
     public void requestWeather(final String weatherId) {
-        String weatherUrl = "http://guolin.tech/api/weather?cityid=" + weatherId + "&key=bc0418b57b2d4918819d3974ac1285d9";
+        String weatherUrl = "http://guolin.tech/api/weather?cityid=" + weatherId + "&key=cb8b65863f734fa99831ca8360d641f7";
         HttpUtil.sendOkHttpRequest(weatherUrl, new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
@@ -204,7 +252,7 @@ public class WeatherActivity extends AppCompatActivity {
         String degree = weather.now.temperature + "℃";
         String weatherInfo = weather.now.more.info;
         titleCity.setText(cityName);
-        titleUpdateTime.setText(updateTime);
+//        titleUpdateTime.setText(updateTime);
         degreeText.setText(degree);
         weatherInfoText.setText(weatherInfo);
         forecastLayout.removeAllViews();
@@ -235,4 +283,34 @@ public class WeatherActivity extends AppCompatActivity {
         startService(intent);
     }
 
+
+    private void bindViews(){
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        @Override
+        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            switch(position){
+                case 0:
+                    Intent intent = new Intent(WeatherActivity.this,Plan.class);
+                    startActivity(intent);
+                    break;
+                case 1:
+                     intent = new Intent(WeatherActivity.this,information.class);
+                    startActivity(intent);
+                    break;
+                case 2:
+                    finish();
+                default:break;
+            }
+        }
+        @Override
+        public void onNothingSelected(AdapterView<?> parent) {
+
+        }
+    });
+    }
 }
+
+
+
+
